@@ -69,10 +69,10 @@ const Hero = () => {
     const video = videoRef.current;
     if (!video) return;
 
-    const startValue = isMobile ? "top 40%" : "center 60%";
-    const endValue = isMobile ? "400% top" : "bottom -30%";
     //const startValue = isMobile ? "top 40%" : "center 60%";
-    // const endValue = isMobile ? "570% top" : "bottom top";
+   // const endValue = isMobile ? "400% top" : "bottom -30%";
+    const startValue = isMobile ? "top 40%" : "center 60%";
+     const endValue = isMobile ? "570% top" : "bottom top";
 
     const init = async () => {
       await waitForVideoReady(video);
@@ -195,7 +195,7 @@ const Hero = () => {
         />
       </section>
 
-      <div className="video absolute !inset-0 z-[-4]">
+      <div className="video absolute z-10 md:z-[-4]">
         <video
           src="/videos/output.mp4"
           ref={videoRef}
